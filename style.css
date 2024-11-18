@@ -1,0 +1,110 @@
+/* Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 12px 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Sticky Navbar */
+.navbar.sticky {
+    background-color: #222;
+}
+
+/* Content Layout */
+.content {
+    padding-top: 80px; /* Increased to accommodate sticky navbar */
+}
+
+section {
+    padding: 80px 30px;
+    margin: 20px 0;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Section Header Styling */
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Hover effect for sections */
+section:hover {
+    transform: translateY(-10px);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+}
